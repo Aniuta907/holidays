@@ -1,3 +1,5 @@
+"use strict";
+
 ///1 Find The Parity Outlier
 // https://www.codewars.com/kata/reviews/565349bca24428f2870000a9/groups/5e1086764ebc2000015beb74
 function findOutlier(integers) {
@@ -13,8 +15,8 @@ function findOutlier(integers) {
     });
   }
 
-  let oddArr = getOdd(integers);
-  let evenArr = getEven(integers);
+  const oddArr = getOdd(integers);
+  const evenArr = getEven(integers);
   if (oddArr.length == 1) return oddArr[0];
   else return evenArr[0];
 }
@@ -22,7 +24,7 @@ function findOutlier(integers) {
 ///2 Exes and Ohs
 // https://www.codewars.com/kata/reviews/55908ab5932c2fc59f000070/groups/5e108c4b4ebc2000015bebdf
 function XO(str) {
-  let newStr = str.toLowerCase();
+  const newStr = str.toLowerCase();
   function count(sp) {
     return newStr.split(sp).length - 1;
   }
@@ -32,9 +34,9 @@ function XO(str) {
 ///3 Shortest Word
 // https://www.codewars.com/kata/reviews/57cec2caf0fe9cd5df000072/groups/5e10916f8c89df0001218c89
 function findShort(s) {
-  let words = s.split(" ");
+  const words = s.split(" ");
   let min = words[0].length;
-  for (var i = 0; i < words.length; i++) {
+  for (let i = 0; i < words.length; i++) {
     if (words[i].length < min) {
       min = words[i].length;
     }
@@ -64,7 +66,7 @@ function filter_list(l) {
 ///6 Isograms
 // https://www.codewars.com/kata/reviews/54cd002407ba21e38f00000f/groups/5e11dc9fbb26620001ace9e0
 function isIsogram(str) {
-  let newStr = str.toLowerCase();
+  const newStr = str.toLowerCase();
   function isSingleLetter(sp) {
     return newStr.split(sp).length - 1 == 1;
   }
